@@ -1,0 +1,149 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color-scheme: light;
+  color: #111;
+  background: #f6f7fb;
+  line-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1080px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #111827;
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #111827;
+}
+
+.hero {
+  padding: 6rem 0 4rem;
+  background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+  color: #ffffff;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.8rem;
+  background: #fbbf24;
+  color: #111827;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.features h2,
+.about h2,
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+article {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+article h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.about p,
+.contact p {
+  max-width: 720px;
+}
+
+.site-footer {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1.5rem 0;
+}
+
+.site-footer p {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 4rem;
+  }
+}
